@@ -19,6 +19,21 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    
+    <script>
+      function searchPage() {
+       
+        var searchTerm = document.getElementById('searchTerm').value;
+        var found = window.find(searchTerm);
+        
+        if (!found) {
+          alert('No matching results found.');
+        }
+      }
+    </script>
+
+    
+
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
@@ -53,7 +68,14 @@
         
         </ul>
         <ul class="icons">
-          <input type="text" placeholder="search" id="search-input" />
+       
+          <input type="text" placeholder="search" id="searchTerm"/>
+       
+        </ul>
+        <ul class="icons">
+       
+          <button onclick="searchPage()" style="height: 30px;border: 1px solid white; padding: 5px 8px;display: flex;align-items: center;margin: 13px;border-radius: 3px;background-color: white;">Search</button>
+       
         </ul>
       </nav>
     

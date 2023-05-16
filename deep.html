@@ -13,6 +13,20 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <script>
+      function searchPage() {
+       
+        var searchTerm = document.getElementById('searchTerm').value;
+        var found = window.find(searchTerm);
+        
+        if (!found) {
+          alert('No matching results found.');
+        }
+      }
+    </script>
+
+
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
@@ -33,8 +47,15 @@
           <li><a href="solution.html">Solution</a></li>
         </ul>
         <ul class="icons">
-          <input type="text" placeholder="search" />
-        </ul>
+       
+          <input type="text" placeholder="search" id="searchTerm"/>
+         
+          </ul>
+          <ul class="icons">
+         
+          <button onclick="searchPage()" style="height: 30px;border: 1px solid white; padding: 5px 8px;display: flex;align-items: center;margin: 13px;border-radius: 3px;background-color: white;">Search</button>
+         
+          </ul>
       </nav>
 
       <!-- Main -->
